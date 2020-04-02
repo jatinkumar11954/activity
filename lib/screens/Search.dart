@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:Parsesapp/components/MovieList.dart';
-import 'package:Parsesapp/json/resultjson.dart';
+import 'package:Activity/grid/Grid.dart';
+import 'package:Activity/json/resultjson.dart';
 
-import 'Result.dart';
+
 
 import 'package:flutter/services.dart';
 import 'package:http/http.dart' as hp;
@@ -48,9 +48,7 @@ Future<List<Movie>> searchMovies(keyword) async {
 
   if (response.statusCode == 200) {
     Map data = json.decode(response.body);
-    data.forEach((key,value){
-print(key+" "+value.to);
-    });
+   
 
     if (data['Response'] == "True") {
        snap=Json.fromJSON(data);
@@ -72,7 +70,7 @@ print(key+" "+value.to);
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Center(child: Text('Search Movies')),
+          title: Center(child: Text(' Movies')),
         ),
         body: Column(
           children: <Widget>[
@@ -104,7 +102,7 @@ print(key+" "+value.to);
                   builder: (context, snapshot) {
                     if (snapshot.hasData) {
                       return Expanded(
-                          child: MovieList(
+                          child: Grid(
                               movies: snapshot.data,
                               itemClick: this.itemClick));
                     } else if (snapshot.hasError) {

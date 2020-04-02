@@ -2,12 +2,13 @@ import 'package:flutter/material.dart';
 import 'screens/Result.dart';
 import 'screens/Search.dart';
 
-void main() => runApp(ParsesApp());
+void main() => runApp(Activity());
 
-class ParsesApp extends StatelessWidget {
+class Activity extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Parses Sample',
       home: Search() ,
        routes: <String, WidgetBuilder>{

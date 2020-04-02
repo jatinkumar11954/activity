@@ -1,4 +1,4 @@
-name: Parsesapp
+name: Activity
 description: A new Flutter project.
 
 # The following defines the version and build number for your application.
@@ -20,6 +20,7 @@ dependencies:
   http: "0.12.0"
   flutter:
     sdk: flutter
+  flutter_staggered_grid_view: ^0.2.5
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.

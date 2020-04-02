@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:Parsesapp/json/resultjson.dart';
+import 'package:Activity/json/resultjson.dart';
 
 class Result extends StatelessWidget {
   @override
@@ -57,7 +57,7 @@ class Result extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: <Widget>[
                               Text(
-                                "Title        :",
+                                "Title          :",
                                 style: style,
                                 textAlign: TextAlign.justify,
                               ),
@@ -72,12 +72,12 @@ class Result extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: <Widget>[
                               Text(
-                                "Released :",
+                                "Released   :",
                                 style: style,
                                 textAlign: TextAlign.justify,
                               ),
                               Expanded(
-                                child: Text(snap.rel, style: style
+                                child: Text(snap.rel!=null?snap.rel:"N/A", style: style
                                     // ,textAlign: TextAlign.justify,
                                     ),
                               ),
@@ -87,12 +87,12 @@ class Result extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: <Widget>[
                               Text(
-                                "Runtime :",
+                                "Runtime   :",
                                 style: style,
                                 textAlign: TextAlign.justify,
                               ),
                               Expanded(
-                                child: Text(snap.run, style: style
+                                child: Text(snap.run!=null?snap.run:"N/A", style: style
                                     // ,textAlign: TextAlign.justify,
                                     ),
                               ),
@@ -102,12 +102,12 @@ class Result extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: <Widget>[
                               Text(
-                                "Director :",
+                                "Director   :",
                                 style: style,
                                 textAlign: TextAlign.justify,
                               ),
                               Expanded(
-                                child: Text(snap.dir, style: style
+                                child: Text(snap.dir!=null?snap.dir:"N/A", style: style
                                     // ,textAlign: TextAlign.justify,
                                     ),
                               ),
@@ -117,12 +117,12 @@ class Result extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: <Widget>[
                               Text(
-                                "Genre    :",
+                                "Genre      :",
                                 style: style,
                                 textAlign: TextAlign.justify,
                               ),
                               Expanded(
-                                child: Text(snap.genre, style: style
+                                child: Text(snap.genre!=null?snap.genre:"N/A", style: style
                                     // ,textAlign: TextAlign.justify,
                                     ),
                               ),
@@ -132,12 +132,12 @@ class Result extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: <Widget>[
                               Text(
-                                "Actors    :",
+                                "Actors      :",
                                 style: style,
                                 textAlign: TextAlign.justify,
                               ),
                               Expanded(
-                                child: Text(snap.act, style: style
+                                child: Text(snap.act!=null?snap.act:"N/A", style: style
                                     // ,textAlign: TextAlign.justify,
                                     ),
                               ),
@@ -147,32 +147,19 @@ class Result extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: <Widget>[
                               Text(
-                                "Plot        :",
+                                "Plot          :",
                                 style: style,
                                 textAlign: TextAlign.justify,
                               ),
                               Expanded(
-                                child: Text(snap.plot, style: style
+                                child: Text(snap.plot!=null?snap.plot:"N/A", style: style
                                     // ,textAlign: TextAlign.justify,
                                     ),
                               ),
                             ]),
                         SizedBox(height: 10),
-                        Row(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: <Widget>[
-                              Text(
-                                "Writer   :",
-                                style: style,
-                                textAlign: TextAlign.justify,
-                              ),
-                              Expanded(
-                                child: Text(snap.wri, style: style
-                                    // ,textAlign: TextAlign.justify,
-                                    ),
-                              ),
-                            ]),
-                        SizedBox(height: 10),
+                        
+                         SizedBox(height: 10),
                         Row(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: <Widget>[
@@ -182,11 +169,41 @@ class Result extends StatelessWidget {
                                 textAlign: TextAlign.justify,
                               ),
                               Expanded(
-                                child: Text(snap.lang, style: style
+                                child: Text(snap.lang!=null?snap.lang:"N/A", style: style
                                     // ,textAlign: TextAlign.justify,
                                     ),
                               ),
                             ]),
+                            Row(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: <Widget>[
+                              Text(
+                                "Writer      :",
+                                style: style,
+                                textAlign: TextAlign.justify,
+                              ),
+                              Expanded(
+                                child: Text(snap.wri!=null?snap.wri:"N/A", style: style
+                                    // ,textAlign: TextAlign.justify,
+                                    ),
+                              ),
+                            ]),
+                            SizedBox(height: 10),
+                        Row(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: <Widget>[
+                              Text(
+                                "DVD        :",
+                                style: style,
+                                textAlign: TextAlign.justify,
+                              ),
+                              Expanded(
+                                child: Text(snap.dvd!=null?snap.dvd:"N/A", style: style
+                                    // ,textAlign: TextAlign.justify,
+                                    ),
+                              ),
+                            ]),
+                       
                         //      SizedBox(height: 10),
                         // Row(
                         //     crossAxisAlignment: CrossAxisAlignment.start,
@@ -202,7 +219,7 @@ class Result extends StatelessWidget {
                         //             ),
                         //       ),
                         //     ]),
-                             SizedBox(height: 10),
+                             SizedBox(height: 15),
                         Row(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: <Widget>[
@@ -212,7 +229,7 @@ class Result extends StatelessWidget {
                                 textAlign: TextAlign.justify,
                               ),
                               Expanded(
-                                child: Text(snap.imdb, style: style
+                                child: Text(snap.imdb!=null?snap.imdb:"N/A", style: style
                                     // ,textAlign: TextAlign.justify,
                                     ),
                               ),
@@ -222,37 +239,23 @@ class Result extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: <Widget>[
                               Text(
-                                "ImdbVotes :",
+                                "ImdbVotes   :",
                                 style: style,
                                 textAlign: TextAlign.justify,
                               ),
                               Expanded(
-                                child: Text(snap.votes, style: style
+                                child: Text(snap.votes!=null?snap.votes:"N/A", style: style
                                     // ,textAlign: TextAlign.justify,
                                     ),
                               ),
                             ]),
+                             
                              SizedBox(height: 10),
                         Row(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: <Widget>[
                               Text(
-                                "DVD :",
-                                style: style,
-                                textAlign: TextAlign.justify,
-                              ),
-                              Expanded(
-                                child: Text(snap.dvd!=null?snap.dvd:"N/A", style: style
-                                    // ,textAlign: TextAlign.justify,
-                                    ),
-                              ),
-                            ]),
-                             SizedBox(height: 10),
-                        Row(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: <Widget>[
-                              Text(
-                                "BoxOffice :",
+                                "BoxOffice    :",
                                 style: style,
                                 textAlign: TextAlign.justify,
                               ),
@@ -267,7 +270,7 @@ class Result extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: <Widget>[
                               Text(
-                                "Production :",
+                                "Production  :",
                                 style: style,
                                 textAlign: TextAlign.justify,
                               ),
@@ -282,7 +285,7 @@ class Result extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: <Widget>[
                               Text(
-                                "Website :",
+                                "Website       :",
                                 style: style,
                                 textAlign: TextAlign.justify,
                               ),
@@ -297,7 +300,7 @@ class Result extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: <Widget>[
                               Text(
-                                "MetaScore :",
+                                "MetaScore  :",
                                 style: style,
                                 textAlign: TextAlign.justify,
                               ),
