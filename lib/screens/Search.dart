@@ -64,10 +64,11 @@ class SearchState extends State<Search> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Center(child: Text(' Movies')),
+          title: Center(child: Text('Search Movies')),
         ),
         body: Column(
           children: <Widget>[
+            
             Container(
               child: Row(children: <Widget>[
                 Flexible(

@@ -15,6 +15,10 @@ class Result extends StatelessWidget {
       body: CustomScrollView(
         slivers: <Widget>[
           SliverAppBar(
+            leading: new IconButton(
+    icon: new Icon(Icons.arrow_back, color: Colors.black),
+    onPressed: () => Navigator.of(context).pop(),
+  ), 
             expandedHeight: 300,
             pinned: true,
             flexibleSpace: FlexibleSpaceBar(
