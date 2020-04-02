@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:moviesapp/models/Movie.dart' as models;
+import 'package:Parsesapp/json/resultjson.dart';
+
 
 class MovieItem extends StatelessWidget {
-  final models.Movie movie;
+  final Movie movie;
 
   MovieItem({this.movie});
 

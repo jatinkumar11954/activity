@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:moviesapp/components/MovieList.dart';
-import 'package:moviesapp/models/MovieInfo.dart';
-import 'package:moviesapp/screens/Result.dart';
-import 'package:moviesapp/services/MovieService.dart';
-import 'package:moviesapp/models/Movie.dart';
+import 'package:Parsesapp/components/MovieList.dart';
+import 'package:Parsesapp/json/resultjson.dart';
+
+import 'Result.dart';
+
 import 'package:flutter/services.dart';
 import 'package:http/http.dart' as hp;
 import 'dart:convert';
+
 
 
 class Search extends StatefulWidget {
@@ -15,10 +16,27 @@ class Search extends StatefulWidget {
 }
 
 class SearchState extends State<Search> {
- MovieInfo snap;
+ Json snap;
   final searchTextController = new TextEditingController();
   String searchText = "";
+Future<List<Movie>> searchMovies(keyword) async {
+  final response = await hp.get('http://www.omdbapi.com/?apikey=a1b5f9ec&s=$keyword');
 
+  if (response.statusCode == 200) {
+    Map data = json.decode(response.body);
+
+    if (data['Response'] == "True") {
+      var list = (data['Search'] as List)
+          .map((item) => new Movie.fromJson(item))
+          .toList();
+      return list;
+    } else {
+      throw Exception(data['Error']);
+    }
+  } else {
+    throw Exception('Something went wrong !');
+  }
+}
   @override
   void dispose() {
     searchTextController.dispose();
@@ -30,9 +48,12 @@ class SearchState extends State<Search> {
 
   if (response.statusCode == 200) {
     Map data = json.decode(response.body);
+    data.forEach((key,value){
+print(key+" "+value.to);
+    });
 
     if (data['Response'] == "True") {
-       snap=MovieInfo.fromJSON(data);
+       snap=Json.fromJSON(data);
        
     } else {
       throw Exception(data['Error']);

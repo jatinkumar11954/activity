@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:moviesapp/screens/Result.dart';
-import 'package:moviesapp/screens/Search.dart';
+import 'screens/Result.dart';
+import 'screens/Search.dart';
 
-void main() => runApp(MoviesApp());
+void main() => runApp(ParsesApp());
 
-class MoviesApp extends StatelessWidget {
+class ParsesApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Movies Sample',
+      title: 'Parses Sample',
       home: Search() ,
        routes: <String, WidgetBuilder>{
           'Search': (BuildContext context) => new Search(),
