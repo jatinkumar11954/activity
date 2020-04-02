@@ -64,6 +64,7 @@ class Json {
         meta: json['Metascore']);
   }
 }
+
 class Movie {
   final String title;
   final String year;

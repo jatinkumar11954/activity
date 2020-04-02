@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:Activity/screens/Result.dart';
+
 import 'package:Activity/json/resultjson.dart';
 
 class Grid extends StatelessWidget {
   final List<Movie> movies;
-  final Function itemClick;
+  final Function Click;
 
-  Grid({this.movies, this.itemClick});
+  Grid({this.movies, this.Click});
 
   @override
   Widget build(context) {
-    print(movies[1].poster);
+    // print(movies[1].poster);
     return new Container(
       decoration: BoxDecoration(color: Colors.grey),
       child: GridView.builder(
@@ -32,7 +32,7 @@ class Grid extends StatelessWidget {
                     children: <Widget>[
                       GestureDetector(
                         onTap: () {
-                          this.itemClick(this.movies[i]);
+                          this.Click(this.movies[i]);
                         },
                         child: SizedBox(
                           height: (MediaQuery.of(context).size.height) * 0.32,
@@ -45,28 +45,35 @@ class Grid extends StatelessWidget {
                           ),
                         ),
                       ),
-                       Column(children: <Widget>[GestureDetector(
-                        onTap: () {
-                          this.itemClick(this.movies[i]);
-                        },
-                      child:Text(
-                        movies[i].title,
-                        style: TextStyle(
-                          fontFamily: "CharterBT",
-                          color: Colors.black,
-                          fontWeight: FontWeight.w400,
-                          fontSize:
-                              (MediaQuery.of(context).size.height) * 0.020,
-                        ),
-                        overflow: TextOverflow.ellipsis,
-                        maxLines: 2,
-                      ),),
-                       Center(
-                         child: GestureDetector(
-                          onTap: () {
-                            this.itemClick(this.movies[i]);
-                          },child:Text(movies[i].year),),
-                       )],)
+                      Column(
+                        children: <Widget>[
+                          GestureDetector(
+                            onTap: () {
+                              this.Click(this.movies[i]);
+                            },
+                            child: Text(
+                              movies[i].title,
+                              style: TextStyle(
+                                fontFamily: "CharterBT",
+                                color: Colors.black,
+                                fontWeight: FontWeight.w400,
+                                fontSize: (MediaQuery.of(context).size.height) *
+                                    0.020,
+                              ),
+                              overflow: TextOverflow.ellipsis,
+                              maxLines: 2,
+                            ),
+                          ),
+                          Center(
+                            child: GestureDetector(
+                              onTap: () {
+                                this.Click(this.movies[i]);
+                              },
+                              child: Text(movies[i].year),
+                            ),
+                          )
+                        ],
+                      )
                     ]),
               ),
             ),
@@ -80,14 +87,6 @@ class Grid extends StatelessWidget {
         ),
       ),
 
-      //  ListView.builder(
-      //     padding: const EdgeInsets.all(8.0),
-      //     itemCount: this.movies.length,
-      //     itemBuilder: (BuildContext context, int index) {
-      //       return new GestureDetector(
-      //           child: MovieItem(movie: this.movies[index]),
-      //           onTap: () => this.itemClick(this.movies[index]));
-      //     }
     );
   }
 }

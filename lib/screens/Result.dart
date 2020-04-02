@@ -77,7 +77,8 @@ class Result extends StatelessWidget {
                                 textAlign: TextAlign.justify,
                               ),
                               Expanded(
-                                child: Text(snap.rel!=null?snap.rel:"N/A", style: style
+                                child: Text(snap.rel != null ? snap.rel : "N/A",
+                                    style: style
                                     // ,textAlign: TextAlign.justify,
                                     ),
                               ),
@@ -92,7 +93,8 @@ class Result extends StatelessWidget {
                                 textAlign: TextAlign.justify,
                               ),
                               Expanded(
-                                child: Text(snap.run!=null?snap.run:"N/A", style: style
+                                child: Text(snap.run != null ? snap.run : "N/A",
+                                    style: style
                                     // ,textAlign: TextAlign.justify,
                                     ),
                               ),
@@ -107,7 +109,8 @@ class Result extends StatelessWidget {
                                 textAlign: TextAlign.justify,
                               ),
                               Expanded(
-                                child: Text(snap.dir!=null?snap.dir:"N/A", style: style
+                                child: Text(snap.dir != null ? snap.dir : "N/A",
+                                    style: style
                                     // ,textAlign: TextAlign.justify,
                                     ),
                               ),
@@ -122,7 +125,9 @@ class Result extends StatelessWidget {
                                 textAlign: TextAlign.justify,
                               ),
                               Expanded(
-                                child: Text(snap.genre!=null?snap.genre:"N/A", style: style
+                                child: Text(
+                                    snap.genre != null ? snap.genre : "N/A",
+                                    style: style
                                     // ,textAlign: TextAlign.justify,
                                     ),
                               ),
@@ -137,7 +142,8 @@ class Result extends StatelessWidget {
                                 textAlign: TextAlign.justify,
                               ),
                               Expanded(
-                                child: Text(snap.act!=null?snap.act:"N/A", style: style
+                                child: Text(snap.act != null ? snap.act : "N/A",
+                                    style: style
                                     // ,textAlign: TextAlign.justify,
                                     ),
                               ),
@@ -152,14 +158,16 @@ class Result extends StatelessWidget {
                                 textAlign: TextAlign.justify,
                               ),
                               Expanded(
-                                child: Text(snap.plot!=null?snap.plot:"N/A", style: style
+                                child: Text(
+                                    snap.plot != null ? snap.plot : "N/A",
+                                    style: style
                                     // ,textAlign: TextAlign.justify,
                                     ),
                               ),
                             ]),
                         SizedBox(height: 10),
-                        
-                         SizedBox(height: 10),
+
+                        SizedBox(height: 10),
                         Row(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: <Widget>[
@@ -169,12 +177,14 @@ class Result extends StatelessWidget {
                                 textAlign: TextAlign.justify,
                               ),
                               Expanded(
-                                child: Text(snap.lang!=null?snap.lang:"N/A", style: style
+                                child: Text(
+                                    snap.lang != null ? snap.lang : "N/A",
+                                    style: style
                                     // ,textAlign: TextAlign.justify,
                                     ),
                               ),
                             ]),
-                            Row(
+                        Row(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: <Widget>[
                               Text(
@@ -183,12 +193,13 @@ class Result extends StatelessWidget {
                                 textAlign: TextAlign.justify,
                               ),
                               Expanded(
-                                child: Text(snap.wri!=null?snap.wri:"N/A", style: style
+                                child: Text(snap.wri != null ? snap.wri : "N/A",
+                                    style: style
                                     // ,textAlign: TextAlign.justify,
                                     ),
                               ),
                             ]),
-                            SizedBox(height: 10),
+                        SizedBox(height: 10),
                         Row(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: <Widget>[
@@ -198,12 +209,13 @@ class Result extends StatelessWidget {
                                 textAlign: TextAlign.justify,
                               ),
                               Expanded(
-                                child: Text(snap.dvd!=null?snap.dvd:"N/A", style: style
+                                child: Text(snap.dvd != null ? snap.dvd : "N/A",
+                                    style: style
                                     // ,textAlign: TextAlign.justify,
                                     ),
                               ),
                             ]),
-                       
+
                         //      SizedBox(height: 10),
                         // Row(
                         //     crossAxisAlignment: CrossAxisAlignment.start,
@@ -219,7 +231,7 @@ class Result extends StatelessWidget {
                         //             ),
                         //       ),
                         //     ]),
-                             SizedBox(height: 15),
+                        SizedBox(height: 15),
                         Row(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: <Widget>[
@@ -229,12 +241,14 @@ class Result extends StatelessWidget {
                                 textAlign: TextAlign.justify,
                               ),
                               Expanded(
-                                child: Text(snap.imdb!=null?snap.imdb:"N/A", style: style
+                                child: Text(
+                                    snap.imdb != null ? snap.imdb : "N/A",
+                                    style: style
                                     // ,textAlign: TextAlign.justify,
                                     ),
                               ),
                             ]),
-                             SizedBox(height: 10),
+                        SizedBox(height: 10),
                         Row(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: <Widget>[
@@ -244,13 +258,15 @@ class Result extends StatelessWidget {
                                 textAlign: TextAlign.justify,
                               ),
                               Expanded(
-                                child: Text(snap.votes!=null?snap.votes:"N/A", style: style
+                                child: Text(
+                                    snap.votes != null ? snap.votes : "N/A",
+                                    style: style
                                     // ,textAlign: TextAlign.justify,
                                     ),
                               ),
                             ]),
-                             
-                             SizedBox(height: 10),
+
+                        SizedBox(height: 10),
                         Row(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: <Widget>[
@@ -260,12 +276,13 @@ class Result extends StatelessWidget {
                                 textAlign: TextAlign.justify,
                               ),
                               Expanded(
-                                child: Text(snap.box!=null?snap.box:"N/A", style: style
+                                child: Text(snap.box != null ? snap.box : "N/A",
+                                    style: style
                                     // ,textAlign: TextAlign.justify,
                                     ),
                               ),
                             ]),
-                             SizedBox(height: 10),
+                        SizedBox(height: 10),
                         Row(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: <Widget>[
@@ -275,12 +292,14 @@ class Result extends StatelessWidget {
                                 textAlign: TextAlign.justify,
                               ),
                               Expanded(
-                                child: Text(snap.prod!=null?snap.prod:"N/A", style: style
+                                child: Text(
+                                    snap.prod != null ? snap.prod : "N/A",
+                                    style: style
                                     // ,textAlign: TextAlign.justify,
                                     ),
                               ),
                             ]),
-                             SizedBox(height: 10),
+                        SizedBox(height: 10),
                         Row(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: <Widget>[
@@ -290,12 +309,13 @@ class Result extends StatelessWidget {
                                 textAlign: TextAlign.justify,
                               ),
                               Expanded(
-                                child: Text(snap.web!=null?snap.web:"N/A", style: style
+                                child: Text(snap.web != null ? snap.web : "N/A",
+                                    style: style
                                     // ,textAlign: TextAlign.justify,
                                     ),
                               ),
                             ]),
-                             SizedBox(height: 10),
+                        SizedBox(height: 10),
                         Row(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: <Widget>[
@@ -305,7 +325,9 @@ class Result extends StatelessWidget {
                                 textAlign: TextAlign.justify,
                               ),
                               Expanded(
-                                child: Text(snap.meta!=null?snap.meta:"N/A", style: style
+                                child: Text(
+                                    snap.meta != null ? snap.meta : "N/A",
+                                    style: style
                                     // ,textAlign: TextAlign.justify,
                                     ),
                               ),
